@@ -1,0 +1,21 @@
+{
+  "name": "ultimo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "gulp-uglify": "^2.1.2"
+  },
+  "scripts": {
+   "css":"mkdir -p build/css && stylus src/css/estilo.styl -o build/css/",
+   "js":"mkdir -p build/js && uglify src/js/main.js -o build/js/main.min.js",
+   "build":"npm run css && npm run js && echo 'Hermos terminado el proceso'"
+  },
+  "author": "",
+  "license": "ISC"
+}
